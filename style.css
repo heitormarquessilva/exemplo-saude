@@ -81,11 +81,6 @@ a { color: var(--laranja-escuro); }
 .lista-trat dt { font-family: var(--serif); font-size: 1.45rem; font-weight: 500; margin-bottom: .4rem; }
 .lista-trat dd { margin: 0; color: var(--suave); }
 
-.pessoas { display: grid; grid-template-columns: repeat(2, minmax(0, 22rem)); gap: 3rem; margin-top: 2rem; }
-.pessoa img { aspect-ratio: 6 / 7; object-fit: cover; width: 100%; border-radius: 8px; margin-bottom: 1rem; }
-.pessoa h3 { margin-bottom: .15rem; }
-.cargo { color: var(--laranja-escuro); font-weight: 700; margin-bottom: .6rem; }
-.registro { font-size: .9rem; color: var(--suave); }
 
 .info { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; background: var(--eucalipto); color: #f1f0ec; }
 .info a { color: #ffd2bd; }
@@ -120,7 +115,6 @@ details p { color: var(--suave); padding-bottom: .5rem; }
   .abertura, .info, .lista-trat { grid-template-columns: 1fr; }
   .abertura-foto { order: -1; }
   .abertura-foto img { aspect-ratio: 4 / 3.2; border-radius: 10rem 10rem 8px 8px; }
-  .pessoas { grid-template-columns: 1fr; }
   .chamada { border-radius: 8px 8px 8px 3rem; }
 }
 
