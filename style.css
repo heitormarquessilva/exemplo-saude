@@ -6,13 +6,15 @@
   --laranja-escuro: #a9431b;
   --eucalipto: #2f4a43;
   --linha: #d6d4cd;
+  --branco: #fff;
+  --laranja-hover: #8d3714;
   --serif: "Literata", Georgia, serif;
   --sans: "Atkinson Hyperlegible", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } summary::after { transition: none; } }
 
 body {
   margin: 0;
@@ -31,7 +33,7 @@ a { color: var(--laranja-escuro); }
 
 :focus-visible { outline: 3px solid var(--laranja-escuro); outline-offset: 3px; border-radius: 4px; }
 
-.pular { position: absolute; left: -999px; top: 0; background: var(--tinta); color: #fff; padding: .6rem 1rem; z-index: 10; }
+.pular { position: absolute; left: -999px; top: 0; background: var(--tinta); color: var(--branco); padding: .6rem 1rem; z-index: 10; }
 .pular:focus { left: 1rem; top: 1rem; }
 
 /* Topo */
@@ -59,13 +61,13 @@ a { color: var(--laranja-escuro); }
 
 .acoes { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; margin-top: 1.5rem; }
 .botao {
-  display: inline-block; background: var(--laranja-escuro); color: #fff;
+  display: inline-block; background: var(--laranja-escuro); color: var(--branco);
   font-weight: 700; text-decoration: none;
   padding: .95rem 1.5rem; border-radius: 999px;
 }
-.botao:hover { background: #8d3714; }
+.botao:hover { background: var(--laranja-hover); }
 .botao-claro { background: var(--papel); color: var(--eucalipto); }
-.botao-claro:hover { background: #fff; }
+.botao-claro:hover { background: var(--branco); }
 .botao-claro:focus-visible { outline-color: var(--papel); }
 .link { font-weight: 700; }
 
@@ -73,7 +75,7 @@ a { color: var(--laranja-escuro); }
 .bloco { padding: clamp(3rem, 7vw, 5.5rem) clamp(1rem, 5vw, 4rem); }
 .intro { font-size: 1.1rem; color: var(--suave); }
 
-.tratamentos { background: #fff; }
+.tratamentos { background: var(--branco); }
 .lista-trat { margin: 2.5rem 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 4rem; }
 .lista-trat > div { padding: 1.5rem 0; border-top: 2px solid var(--tinta); }
 .lista-trat dt { font-family: var(--serif); font-size: 1.45rem; font-weight: 500; margin-bottom: .4rem; }
@@ -121,3 +123,6 @@ details p { color: var(--suave); padding-bottom: .5rem; }
   .pessoas { grid-template-columns: 1fr; }
   .chamada { border-radius: 8px 8px 8px 3rem; }
 }
+
+.aviso-exemplo { font-size: .85rem; color: var(--suave); margin: 1rem 0 0; }
+.chamada .aviso-exemplo { color: #c9d4cf; }
